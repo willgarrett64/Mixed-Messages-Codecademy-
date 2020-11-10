@@ -69,3 +69,31 @@ function selectRandomPlayer(posArr = selectRandomPosition()) {
     return ranPlayer;
 }
 
+
+
+
+const theWhy = [
+    `Since you have a really poor ${position} `,
+    `To help strengthen your ${position} `,
+    `Your ${position} really needs a helping hand, so `,
+    `Your ${position} is already pretty strong so `,
+    `You may wish to think about bolstering your ${position} but `,
+    `Looking at your ${position}, `,
+    `Your ${position} is already really strong so `,
+    `You should be proud of your strong ${position}, `,
+    `Since your have a great ${position} already, `
+];
+
+const theWhat = [
+    `you should transfer in ${player.name}.`,
+    `you really need to buy ${player.name}.`,
+    `it would be a good idea to add ${player.name} into your team.`,
+    `we're unsure whether you should buy ${player.name} or not.`,
+    `it's hard to say if you should purchase ${player.name}.`,
+    `buying ${player.name} could be a good or bad decision.`,
+    `don't bother transfering in ${player.name}.`,
+    `avoid wasting money on ${player.name}.`,
+    `it wouldn't be a good idea to buy ${player.name}.`
+];
+
+const theStats = `${player.name} info:\n\nTeam: ${player.team}\nPrice: £${player.cost}m\nSelected by: ${player.tsb}%`;
