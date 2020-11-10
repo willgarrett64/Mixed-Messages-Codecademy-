@@ -40,7 +40,7 @@ rawData.forEach(player => {
 });
 
 
-// Function to select a random position should the 
+// Function to select a random position
 function selectRandomPosition() {
     const ranNum = Math.floor(Math.random() * 4);
     switch (ranNum) {
@@ -62,7 +62,10 @@ function selectRandomPosition() {
     };
 }
 
-
+// Function to select a random player. If no argument is passed in, a random position is selected using selectRandomPosition function. 
 function selectRandomPlayer(posArr = selectRandomPosition()) {
-    
+    const ranNum = Math.floor(Math.random() * posArr.length);
+    const ranPlayer = posArr[ranNum];
+    return ranPlayer;
 }
+
