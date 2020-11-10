@@ -4,7 +4,7 @@ This is a Codecademy project designed to help us practice creating a simple Java
 
 ## Project objectives
 
-We were asked to create a program that creates random messages everytime the user runs it. The theme I chose to create was a random piece of transfer advice for [Fantasy Premier League](https://fantasy.premierleague.com/).
+We were asked to create a program that creates random messages everytime the user runs it. The theme I chose to create was a random piece of transfer advice for *[Fantasy Premier League](https://fantasy.premierleague.com/)* (FPL).
 
 ## Technologies
 
@@ -26,3 +26,13 @@ The project is used to test and demonstrate our knowledge of some simple JavaScr
 - Organising my code for others to easily follow by:
   - Spliting code into easy to follow chunks and functions.
   - Extensively, coherently commenting throughout.
+
+### Possible future additions
+
+- Further random advice, such as:
+  - When to make the transfer, i.e. on which game-week.
+  - When to captain the player they are transfering in.
+  - Advice on when to use their *[chips](https://groupscs.co.uk/fantasy-premier-league-chips/)* (free-hits, triple captain, bench-boost, wildcard).
+- User inputs their current FPL team:
+  - Then the program cross-references the random message with the user's team to exclude recommending a player they already have.
+  - Program looks at the the user's team and the points assosciated with each player/position, and therefore selects an appropriate message whether it consider's their team to be good/average/bad. I.e. if the team has a below-average total points for their midfield, recommend transfering in a midfielder with a higher.
