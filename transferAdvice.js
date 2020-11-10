@@ -121,5 +121,9 @@ const theWhat = [
     `it wouldn't be a good idea to buy ${player.name}.`
 ];
 
+// NOTE: theWhy and theWhat both have 9 items, split into 3 negative, 3 neutral and 3 positive messages. I.e. For indexes 0-2 of theWhy, only indexes 0-2 of theWhat will match. Same for 3-5 and 6-8.
+
 // Player stats displayed in a string. 
 const theStats = `${player.name} info:\n\nTeam: ${player.team}\nPrice: £${player.cost}m\nSelected by: ${player.tsb}%`;
+
+
