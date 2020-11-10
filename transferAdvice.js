@@ -143,6 +143,7 @@ function createRandomMessage() {
         ranTheWhatIndex += 3;
     };
     
+    // Prints random message to the console.
     console.log('');
     console.log(theWhy[ranTheWhyIndex] + theWhat[ranTheWhatIndex] + theStats);
 }
