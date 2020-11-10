@@ -62,16 +62,40 @@ function selectRandomPosition() {
     };
 }
 
-// Function to select a random player. If no argument is passed in, a random position is selected using selectRandomPosition function. 
-function selectRandomPlayer(posArr = selectRandomPosition()) {
+// Function to select a random player. 
+function selectRandomPlayer(selectRandomPosition()) {
     const ranNum = Math.floor(Math.random() * posArr.length);
     const ranPlayer = posArr[ranNum];
     return ranPlayer;
 }
 
 
+// Selects a random player to be suggested for transfer in the random message.
+const player = selectRandomPlayer();
 
 
+// Create a complete string (not shorthand) for the player position to be interpolated into the random message.
+let position;
+switch (player.position) {
+        case 'GKP':
+            position = 'goalkeeper';
+            break;
+    
+        case 'DEF':
+            position = 'defence';
+            break;
+        
+        case 'MID':
+            position = 'midfield';
+            break;
+        
+        case 'FWD':
+            position = 'attack';
+            break;
+};
+
+
+// Array of the possible first parts of the random message.
 const theWhy = [
     `Since you have a really poor ${position} `,
     `To help strengthen your ${position} `,
@@ -84,6 +108,7 @@ const theWhy = [
     `Since your have a great ${position} already, `
 ];
 
+// Arry of the possible second parts of the random message.
 const theWhat = [
     `you should transfer in ${player.name}.`,
     `you really need to buy ${player.name}.`,
@@ -96,4 +121,5 @@ const theWhat = [
     `it wouldn't be a good idea to buy ${player.name}.`
 ];
 
+// Player stats displayed in a string. 
 const theStats = `${player.name} info:\n\nTeam: ${player.team}\nPrice: £${player.cost}m\nSelected by: ${player.tsb}%`;
