@@ -16,6 +16,7 @@ rawData.forEach(player => {
         team: player.team,
         position: player.position,
         cost: player.cost,
+        points: player.total_points,
         tsb: player.selected_by_percent,
     };
 
@@ -124,7 +125,7 @@ const theWhat = [
 // NOTE: theWhy and theWhat both have 9 elements, split into 3 negative, 3 neutral and 3 positive messages. I.e. For indexes 0-2 of theWhy, only indexes 0-2 of theWhat will match. Same for 3-5 and 6-8. Therefore, for example, we shouldn't pair theWhy[1] with theWhat[6].
 
 // Player stats displayed in a string. 
-const theStats = `${player.name} info:\n\nTeam: ${player.team}\nPrice: £${player.cost}m\nSelected by: ${player.tsb}%`;
+const theStats = `What do you think? \n${player.name} info:\n--------\nTeam: ${player.team}\nPrice: £${player.cost}m\nTotal Points: ${player.points}\nSelected by: ${player.tsb}%`;
 
 
 
@@ -142,8 +143,8 @@ function createRandomMessage() {
         ranTheWhatIndex += 3;
     };
     
-    console.log(theWhy[ranTheWhyIndex] + theWhat[ranTheWhatIndex]);
-    console.log(theStats);
+    console.log('');
+    console.log(theWhy[ranTheWhyIndex] + theWhat[ranTheWhatIndex] + theStats);
 }
 
 // Call function to create random message.
