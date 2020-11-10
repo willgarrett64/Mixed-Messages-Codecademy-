@@ -63,7 +63,7 @@ function selectRandomPosition() {
 }
 
 // Function to select a random player. 
-function selectRandomPlayer(selectRandomPosition()) {
+function selectRandomPlayer(posArr = selectRandomPosition()) {
     const ranNum = Math.floor(Math.random() * posArr.length);
     const ranPlayer = posArr[ranNum];
     return ranPlayer;
@@ -121,9 +121,30 @@ const theWhat = [
     `it wouldn't be a good idea to buy ${player.name}.`
 ];
 
-// NOTE: theWhy and theWhat both have 9 items, split into 3 negative, 3 neutral and 3 positive messages. I.e. For indexes 0-2 of theWhy, only indexes 0-2 of theWhat will match. Same for 3-5 and 6-8.
+// NOTE: theWhy and theWhat both have 9 elements, split into 3 negative, 3 neutral and 3 positive messages. I.e. For indexes 0-2 of theWhy, only indexes 0-2 of theWhat will match. Same for 3-5 and 6-8. Therefore, for example, we shouldn't pair theWhy[1] with theWhat[6].
 
 // Player stats displayed in a string. 
 const theStats = `${player.name} info:\n\nTeam: ${player.team}\nPrice: £${player.cost}m\nSelected by: ${player.tsb}%`;
 
 
+
+// Function to create random message
+function createRandomMessage() {
+    // Select random index for first part of random message
+    const ranTheWhyIndex = Math.floor(Math.random() * 9);
+    
+    // Select random index for second part of random message, either 0, 1 or 2.
+    let ranTheWhatIndex = Math.floor(Math.random() * 3);
+    // Selects the slice of the theWhat array that corresponds to the theWhy array (see note on line 124).
+    if (ranTheWhyIndex > 5) {
+        ranTheWhatIndex += 6;
+    } else if (ranTheWhyIndex > 2) {
+        ranTheWhatIndex += 3;
+    };
+    
+    console.log(theWhy[ranTheWhyIndex] + theWhat[ranTheWhatIndex]);
+    console.log(theStats);
+}
+
+// Call function to create random message.
+createRandomMessage();
