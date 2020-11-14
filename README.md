@@ -6,6 +6,12 @@ This is a Codecademy project designed to help us practice creating a simple Java
 
 We were asked to create a program that creates random messages everytime the user runs it. The theme I chose to create was a random piece of transfer advice for *[Fantasy Premier League](https://fantasy.premierleague.com/)* (FPL).
 
+## Screenshot
+
+Below is an example of output from the transfer advice generator.
+
+![Example output](./exampleOutput.png)
+
 ## Technologies
 
 - JavaScript
